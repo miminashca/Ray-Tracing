@@ -132,7 +132,7 @@ public class RayTracingManager : MonoBehaviour
         rayTracingMaterial.SetColor("SkyColourHorizon", environmentSettings.skyColourHorizon);
         rayTracingMaterial.SetColor("SkyColourZenith", environmentSettings.skyColourZenith);
         if (environmentSettings.sunLight != null) {
-            rayTracingMaterial.SetVector("SunLightDirection", -environmentSettings.sunLight.transform.forward);
+            rayTracingMaterial.SetVector("SunLightDirection", environmentSettings.sunLight.transform.forward);
         }
         rayTracingMaterial.SetFloat("SunFocus", environmentSettings.sunFocus);
         rayTracingMaterial.SetFloat("SunIntensity", environmentSettings.sunIntensity);
