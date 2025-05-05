@@ -130,6 +130,7 @@ GameObject:
   - component: {fileID: 195981446}
   - component: {fileID: 195981445}
   - component: {fileID: 195981444}
+  - component: {fileID: 195981447}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -211,6 +212,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 21.02, y: 0, z: 0}
+--- !u!114 &195981447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 195981443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37c9b628f5c544975a79ecea4bd2abd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxBounceCount: 10
+  numRaysPerPixel: 15
+  defocusStrength: 0
+  divergeStrength: 2
+  focusDistance: 1
+  environmentSettings:
+    enabled: 1
+    groundColour: {r: 0.2603773, g: 0.2603773, b: 0.2603773, a: 0}
+    skyColourHorizon: {r: 0.690566, g: 0.690566, b: 0.690566, a: 0}
+    skyColourZenith: {r: 0, g: 0.33154207, b: 0.6528301, a: 0}
+    sunLight: {fileID: 457401409}
+    sunFocus: 254.5
+    sunIntensity: 29.11
+  useShader: 1
+  rayTracingShader: {fileID: 4800000, guid: 5f6c4a7dd931245cdb0c846ab7072113, type: 3}
+  accumulateShader: {fileID: 4800000, guid: 1462e7e171ddb46b49a2a3b6367216d6, type: 3}
+  numRenderedFrames: 0
+  numMeshChunks: 10
+  numTriangles: 212
 --- !u!1 &311991695
 GameObject:
   m_ObjectHideFlags: 0
@@ -223,13 +255,14 @@ GameObject:
   - component: {fileID: 311991698}
   - component: {fileID: 311991697}
   - component: {fileID: 311991696}
+  - component: {fileID: 311991700}
   m_Layer: 0
   m_Name: PL1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!135 &311991696
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -274,7 +307,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 1383874636}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -320,6 +353,28 @@ Transform:
   - {fileID: 1792776985}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &311991700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 311991695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3471bcf4648f345568ca860145781e69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material:
+    colour: {r: 1, g: 1, b: 1, a: 1}
+    emissionColour: {r: 0.035848916, g: 1, b: 0.20392914, a: 1}
+    specularColour: {r: 1, g: 1, b: 1, a: 1}
+    emissionStrength: 4.46
+    smoothness: 0
+    specularProbability: 1
+    flag: 0
+  materialObjectID: 36232
+  materialInitFlag: 1
 --- !u!1 &340420401
 GameObject:
   m_ObjectHideFlags: 0
@@ -332,13 +387,14 @@ GameObject:
   - component: {fileID: 340420404}
   - component: {fileID: 340420403}
   - component: {fileID: 340420402}
+  - component: {fileID: 340420406}
   m_Layer: 0
   m_Name: PL2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!135 &340420402
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -383,7 +439,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 1871312707}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -429,114 +485,28 @@ Transform:
   - {fileID: 1781882460}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &413642622
-GameObject:
+--- !u!114 &340420406
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 413642626}
-  - component: {fileID: 413642625}
-  - component: {fileID: 413642624}
-  - component: {fileID: 413642623}
-  m_Layer: 0
-  m_Name: Cube (2)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!65 &413642623
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 413642622}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
+  m_GameObject: {fileID: 340420401}
   m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &413642624
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 413642622}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: dd56224181a7a40839d26fe85cbf8cb3, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &413642625
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 413642622}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &413642626
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 413642622}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0.003018404, y: 0.6194678, z: -0.34559992, w: 0.7048484}
-  m_LocalPosition: {x: 1.55, y: -0.39, z: -6.09}
-  m_LocalScale: {x: 1.8397, y: 1.8397, z: 1.8397}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 25.622, y: 75.057, z: -32.424}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3471bcf4648f345568ca860145781e69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material:
+    colour: {r: 1, g: 1, b: 1, a: 1}
+    emissionColour: {r: 0.8490566, g: 0, b: 0, a: 1}
+    specularColour: {r: 1, g: 1, b: 1, a: 1}
+    emissionStrength: 3.63
+    smoothness: 0
+    specularProbability: 1
+    flag: 0
+  materialObjectID: 36242
+  materialInitFlag: 1
 --- !u!1 &457401408
 GameObject:
   m_ObjectHideFlags: 0
@@ -634,7 +604,89 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 152.609, y: -124.671005, z: -100.451996}
---- !u!1 &623191199
+--- !u!21 &769411698
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Standard
+  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _BumpScale: 1
+    - _Cutoff: 0.5
+    - _DetailNormalMapScale: 1
+    - _DstBlend: 0
+    - _GlossMapScale: 1
+    - _Glossiness: 0.5
+    - _GlossyReflections: 1
+    - _Metallic: 0
+    - _Mode: 0
+    - _OcclusionStrength: 1
+    - _Parallax: 0.02
+    - _SmoothnessTextureChannel: 0
+    - _SpecularHighlights: 1
+    - _SrcBlend: 1
+    - _UVSec: 0
+    - _ZWrite: 1
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1
+--- !u!1 &1113130213
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -642,24 +694,128 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 623191203}
-  - component: {fileID: 623191202}
-  - component: {fileID: 623191201}
-  - component: {fileID: 623191200}
+  - component: {fileID: 1113130218}
+  - component: {fileID: 1113130217}
+  - component: {fileID: 1113130216}
+  - component: {fileID: 1113130215}
+  - component: {fileID: 1113130214}
   m_Layer: 0
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!65 &623191200
+  m_IsActive: 1
+--- !u!114 &1113130214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1113130213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d06b107e1c924df2a65c6d726f481aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materials:
+  - colour: {r: 0, g: 0.90188676, b: 0.2665579, a: 1}
+    emissionColour: {r: 1, g: 1, b: 1, a: 1}
+    specularColour: {r: 0, g: 0.90196085, b: 0.26666668, a: 1}
+    emissionStrength: 0
+    smoothness: 0
+    specularProbability: 1
+    flag: 0
+  meshRenderer: {fileID: 1113130216}
+  meshFilter: {fileID: 1113130217}
+  triangleCount: 12
+  materialObjectID: -65868
+  mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  localChunks:
+  - triangles:
+    - posA: {x: 0.5, y: -0.5, z: 0.5}
+      posB: {x: 0.5, y: 0.5, z: 0.5}
+      posC: {x: -0.5, y: 0.5, z: 0.5}
+      normalA: {x: 0, y: 0, z: 1}
+      normalB: {x: 0, y: 0, z: 1}
+      normalC: {x: 0, y: 0, z: 1}
+    - posA: {x: 0.5, y: -0.5, z: 0.5}
+      posB: {x: -0.5, y: 0.5, z: 0.5}
+      posC: {x: -0.5, y: -0.5, z: 0.5}
+      normalA: {x: 0, y: 0, z: 1}
+      normalB: {x: 0, y: 0, z: 1}
+      normalC: {x: 0, y: 0, z: 1}
+    - posA: {x: 0.5, y: 0.5, z: 0.5}
+      posB: {x: 0.5, y: 0.5, z: -0.5}
+      posC: {x: -0.5, y: 0.5, z: -0.5}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 0.5, y: 0.5, z: 0.5}
+      posB: {x: -0.5, y: 0.5, z: -0.5}
+      posC: {x: -0.5, y: 0.5, z: 0.5}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 0.5, y: 0.5, z: -0.5}
+      posB: {x: 0.5, y: -0.5, z: -0.5}
+      posC: {x: -0.5, y: -0.5, z: -0.5}
+      normalA: {x: 0, y: 0, z: -1}
+      normalB: {x: 0, y: 0, z: -1}
+      normalC: {x: 0, y: 0, z: -1}
+    - posA: {x: 0.5, y: 0.5, z: -0.5}
+      posB: {x: -0.5, y: -0.5, z: -0.5}
+      posC: {x: -0.5, y: 0.5, z: -0.5}
+      normalA: {x: 0, y: 0, z: -1}
+      normalB: {x: 0, y: 0, z: -1}
+      normalC: {x: 0, y: 0, z: -1}
+    - posA: {x: 0.5, y: -0.5, z: -0.5}
+      posB: {x: 0.5, y: -0.5, z: 0.5}
+      posC: {x: -0.5, y: -0.5, z: 0.5}
+      normalA: {x: 0, y: -1, z: 0}
+      normalB: {x: 0, y: -1, z: 0}
+      normalC: {x: 0, y: -1, z: 0}
+    - posA: {x: 0.5, y: -0.5, z: -0.5}
+      posB: {x: -0.5, y: -0.5, z: 0.5}
+      posC: {x: -0.5, y: -0.5, z: -0.5}
+      normalA: {x: 0, y: -1, z: 0}
+      normalB: {x: 0, y: -1, z: 0}
+      normalC: {x: 0, y: -1, z: 0}
+    - posA: {x: -0.5, y: -0.5, z: 0.5}
+      posB: {x: -0.5, y: 0.5, z: 0.5}
+      posC: {x: -0.5, y: 0.5, z: -0.5}
+      normalA: {x: -1, y: 0, z: 0}
+      normalB: {x: -1, y: 0, z: 0}
+      normalC: {x: -1, y: 0, z: 0}
+    - posA: {x: -0.5, y: -0.5, z: 0.5}
+      posB: {x: -0.5, y: 0.5, z: -0.5}
+      posC: {x: -0.5, y: -0.5, z: -0.5}
+      normalA: {x: -1, y: 0, z: 0}
+      normalB: {x: -1, y: 0, z: 0}
+      normalC: {x: -1, y: 0, z: 0}
+    - posA: {x: 0.5, y: -0.5, z: -0.5}
+      posB: {x: 0.5, y: 0.5, z: -0.5}
+      posC: {x: 0.5, y: 0.5, z: 0.5}
+      normalA: {x: 1, y: 0, z: 0}
+      normalB: {x: 1, y: 0, z: 0}
+      normalC: {x: 1, y: 0, z: 0}
+    - posA: {x: 0.5, y: -0.5, z: -0.5}
+      posB: {x: 0.5, y: 0.5, z: 0.5}
+      posC: {x: 0.5, y: -0.5, z: 0.5}
+      normalA: {x: 1, y: 0, z: 0}
+      normalB: {x: 1, y: 0, z: 0}
+      normalC: {x: 1, y: 0, z: 0}
+    bounds:
+      m_Center: {x: 0.0024999976, y: -0.0024999976, z: 0.0024999976}
+      m_Extent: {x: 0.5025, y: 0.5025, z: 0.5025}
+    subMeshIndex: 0
+--- !u!65 &1113130215
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 623191199}
+  m_GameObject: {fileID: 1113130213}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -674,13 +830,13 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &623191201
+--- !u!23 &1113130216
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 623191199}
+  m_GameObject: {fileID: 1113130213}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -697,7 +853,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7d02234775d4b494cb64991e85a50abb, type: 2}
+  - {fileID: 1935336903}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -719,21 +875,315 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &623191202
+--- !u!33 &1113130217
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 623191199}
+  m_GameObject: {fileID: 1113130213}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &623191203
+--- !u!4 &1113130218
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 623191199}
+  m_GameObject: {fileID: 1113130213}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.003018404, y: 0.6194678, z: -0.34559992, w: 0.7048484}
+  m_LocalPosition: {x: 1.55, y: -0.39, z: -6.09}
+  m_LocalScale: {x: 1.8397, y: 1.8397, z: 1.8397}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 25.622, y: 75.057, z: -32.424}
+--- !u!21 &1383874636
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Standard
+  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _BumpScale: 1
+    - _Cutoff: 0.5
+    - _DetailNormalMapScale: 1
+    - _DstBlend: 0
+    - _GlossMapScale: 1
+    - _Glossiness: 0.5
+    - _GlossyReflections: 1
+    - _Metallic: 0
+    - _Mode: 0
+    - _OcclusionStrength: 1
+    - _Parallax: 0.02
+    - _SmoothnessTextureChannel: 0
+    - _SpecularHighlights: 1
+    - _SrcBlend: 1
+    - _UVSec: 0
+    - _ZWrite: 1
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1
+--- !u!1 &1405691648
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1405691653}
+  - component: {fileID: 1405691652}
+  - component: {fileID: 1405691651}
+  - component: {fileID: 1405691650}
+  - component: {fileID: 1405691649}
+  m_Layer: 0
+  m_Name: Cube (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1405691649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1405691648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d06b107e1c924df2a65c6d726f481aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materials:
+  - colour: {r: 1, g: 0, b: 0.5441303, a: 1}
+    emissionColour: {r: 1, g: 1, b: 1, a: 1}
+    specularColour: {r: 1, g: 0, b: 0.54509807, a: 1}
+    emissionStrength: 0
+    smoothness: 0
+    specularProbability: 1
+    flag: 0
+  meshRenderer: {fileID: 1405691651}
+  meshFilter: {fileID: 1405691652}
+  triangleCount: 12
+  materialObjectID: -60680
+  mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  localChunks:
+  - triangles:
+    - posA: {x: 0.5, y: -0.5, z: 0.5}
+      posB: {x: 0.5, y: 0.5, z: 0.5}
+      posC: {x: -0.5, y: 0.5, z: 0.5}
+      normalA: {x: 0, y: 0, z: 1}
+      normalB: {x: 0, y: 0, z: 1}
+      normalC: {x: 0, y: 0, z: 1}
+    - posA: {x: 0.5, y: -0.5, z: 0.5}
+      posB: {x: -0.5, y: 0.5, z: 0.5}
+      posC: {x: -0.5, y: -0.5, z: 0.5}
+      normalA: {x: 0, y: 0, z: 1}
+      normalB: {x: 0, y: 0, z: 1}
+      normalC: {x: 0, y: 0, z: 1}
+    - posA: {x: 0.5, y: 0.5, z: 0.5}
+      posB: {x: 0.5, y: 0.5, z: -0.5}
+      posC: {x: -0.5, y: 0.5, z: -0.5}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 0.5, y: 0.5, z: 0.5}
+      posB: {x: -0.5, y: 0.5, z: -0.5}
+      posC: {x: -0.5, y: 0.5, z: 0.5}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 0.5, y: 0.5, z: -0.5}
+      posB: {x: 0.5, y: -0.5, z: -0.5}
+      posC: {x: -0.5, y: -0.5, z: -0.5}
+      normalA: {x: 0, y: 0, z: -1}
+      normalB: {x: 0, y: 0, z: -1}
+      normalC: {x: 0, y: 0, z: -1}
+    - posA: {x: 0.5, y: 0.5, z: -0.5}
+      posB: {x: -0.5, y: -0.5, z: -0.5}
+      posC: {x: -0.5, y: 0.5, z: -0.5}
+      normalA: {x: 0, y: 0, z: -1}
+      normalB: {x: 0, y: 0, z: -1}
+      normalC: {x: 0, y: 0, z: -1}
+    - posA: {x: 0.5, y: -0.5, z: -0.5}
+      posB: {x: 0.5, y: -0.5, z: 0.5}
+      posC: {x: -0.5, y: -0.5, z: 0.5}
+      normalA: {x: 0, y: -1, z: 0}
+      normalB: {x: 0, y: -1, z: 0}
+      normalC: {x: 0, y: -1, z: 0}
+    - posA: {x: 0.5, y: -0.5, z: -0.5}
+      posB: {x: -0.5, y: -0.5, z: 0.5}
+      posC: {x: -0.5, y: -0.5, z: -0.5}
+      normalA: {x: 0, y: -1, z: 0}
+      normalB: {x: 0, y: -1, z: 0}
+      normalC: {x: 0, y: -1, z: 0}
+    - posA: {x: -0.5, y: -0.5, z: 0.5}
+      posB: {x: -0.5, y: 0.5, z: 0.5}
+      posC: {x: -0.5, y: 0.5, z: -0.5}
+      normalA: {x: -1, y: 0, z: 0}
+      normalB: {x: -1, y: 0, z: 0}
+      normalC: {x: -1, y: 0, z: 0}
+    - posA: {x: -0.5, y: -0.5, z: 0.5}
+      posB: {x: -0.5, y: 0.5, z: -0.5}
+      posC: {x: -0.5, y: -0.5, z: -0.5}
+      normalA: {x: -1, y: 0, z: 0}
+      normalB: {x: -1, y: 0, z: 0}
+      normalC: {x: -1, y: 0, z: 0}
+    - posA: {x: 0.5, y: -0.5, z: -0.5}
+      posB: {x: 0.5, y: 0.5, z: -0.5}
+      posC: {x: 0.5, y: 0.5, z: 0.5}
+      normalA: {x: 1, y: 0, z: 0}
+      normalB: {x: 1, y: 0, z: 0}
+      normalC: {x: 1, y: 0, z: 0}
+    - posA: {x: 0.5, y: -0.5, z: -0.5}
+      posB: {x: 0.5, y: 0.5, z: 0.5}
+      posC: {x: 0.5, y: -0.5, z: 0.5}
+      normalA: {x: 1, y: 0, z: 0}
+      normalB: {x: 1, y: 0, z: 0}
+      normalC: {x: 1, y: 0, z: 0}
+    bounds:
+      m_Center: {x: 0.0024999976, y: -0.0024999976, z: 0.0024999976}
+      m_Extent: {x: 0.5025, y: 0.5025, z: 0.5025}
+    subMeshIndex: 0
+--- !u!65 &1405691650
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1405691648}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1405691651
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1405691648}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 1669821205}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1405691652
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1405691648}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1405691653
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1405691648}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.17018929, z: -0, w: 0.98541147}
   m_LocalPosition: {x: -1.51, y: 1.69, z: -6.08}
@@ -742,6 +1192,170 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 19.598, z: 0}
+--- !u!21 &1600298198
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Standard
+  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _BumpScale: 1
+    - _Cutoff: 0.5
+    - _DetailNormalMapScale: 1
+    - _DstBlend: 0
+    - _GlossMapScale: 1
+    - _Glossiness: 0.5
+    - _GlossyReflections: 1
+    - _Metallic: 0
+    - _Mode: 0
+    - _OcclusionStrength: 1
+    - _Parallax: 0.02
+    - _SmoothnessTextureChannel: 0
+    - _SpecularHighlights: 1
+    - _SrcBlend: 1
+    - _UVSec: 0
+    - _ZWrite: 1
+    m_Colors:
+    - _Color: {r: 0.94773847, g: 1, b: 0.19433957, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1
+--- !u!21 &1669821205
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Standard
+  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _BumpScale: 1
+    - _Cutoff: 0.5
+    - _DetailNormalMapScale: 1
+    - _DstBlend: 0
+    - _GlossMapScale: 1
+    - _Glossiness: 0.5
+    - _GlossyReflections: 1
+    - _Metallic: 0
+    - _Mode: 0
+    - _OcclusionStrength: 1
+    - _Parallax: 0.02
+    - _SmoothnessTextureChannel: 0
+    - _SpecularHighlights: 1
+    - _SrcBlend: 1
+    - _UVSec: 0
+    - _ZWrite: 1
+    m_Colors:
+    - _Color: {r: 1, g: 0, b: 0.5441303, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1
 --- !u!1 &1714126861
 GameObject:
   m_ObjectHideFlags: 0
@@ -754,6 +1368,7 @@ GameObject:
   - component: {fileID: 1714126864}
   - component: {fileID: 1714126863}
   - component: {fileID: 1714126862}
+  - component: {fileID: 1714126866}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -805,7 +1420,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 712717025f7d6425a9513f3dc6f1f1e8, type: 2}
+  - {fileID: 1600298198}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -850,6 +1465,109 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -57.557, z: 0}
+--- !u!114 &1714126866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1714126861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d06b107e1c924df2a65c6d726f481aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materials:
+  - colour: {r: 0.94773847, g: 1, b: 0.19433957, a: 1}
+    emissionColour: {r: 0.9490197, g: 1, b: 0.19607845, a: 1}
+    specularColour: {r: 0.9490197, g: 1, b: 0.19607845, a: 1}
+    emissionStrength: 0
+    smoothness: 0
+    specularProbability: 1
+    flag: 0
+  meshRenderer: {fileID: 1714126863}
+  meshFilter: {fileID: 1714126864}
+  triangleCount: 12
+  materialObjectID: 36278
+  mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  localChunks:
+  - triangles:
+    - posA: {x: 0.5, y: -0.5, z: 0.5}
+      posB: {x: 0.5, y: 0.5, z: 0.5}
+      posC: {x: -0.5, y: 0.5, z: 0.5}
+      normalA: {x: 0, y: 0, z: 1}
+      normalB: {x: 0, y: 0, z: 1}
+      normalC: {x: 0, y: 0, z: 1}
+    - posA: {x: 0.5, y: -0.5, z: 0.5}
+      posB: {x: -0.5, y: 0.5, z: 0.5}
+      posC: {x: -0.5, y: -0.5, z: 0.5}
+      normalA: {x: 0, y: 0, z: 1}
+      normalB: {x: 0, y: 0, z: 1}
+      normalC: {x: 0, y: 0, z: 1}
+    - posA: {x: 0.5, y: 0.5, z: 0.5}
+      posB: {x: 0.5, y: 0.5, z: -0.5}
+      posC: {x: -0.5, y: 0.5, z: -0.5}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 0.5, y: 0.5, z: 0.5}
+      posB: {x: -0.5, y: 0.5, z: -0.5}
+      posC: {x: -0.5, y: 0.5, z: 0.5}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 0.5, y: 0.5, z: -0.5}
+      posB: {x: 0.5, y: -0.5, z: -0.5}
+      posC: {x: -0.5, y: -0.5, z: -0.5}
+      normalA: {x: 0, y: 0, z: -1}
+      normalB: {x: 0, y: 0, z: -1}
+      normalC: {x: 0, y: 0, z: -1}
+    - posA: {x: 0.5, y: 0.5, z: -0.5}
+      posB: {x: -0.5, y: -0.5, z: -0.5}
+      posC: {x: -0.5, y: 0.5, z: -0.5}
+      normalA: {x: 0, y: 0, z: -1}
+      normalB: {x: 0, y: 0, z: -1}
+      normalC: {x: 0, y: 0, z: -1}
+    - posA: {x: 0.5, y: -0.5, z: -0.5}
+      posB: {x: 0.5, y: -0.5, z: 0.5}
+      posC: {x: -0.5, y: -0.5, z: 0.5}
+      normalA: {x: 0, y: -1, z: 0}
+      normalB: {x: 0, y: -1, z: 0}
+      normalC: {x: 0, y: -1, z: 0}
+    - posA: {x: 0.5, y: -0.5, z: -0.5}
+      posB: {x: -0.5, y: -0.5, z: 0.5}
+      posC: {x: -0.5, y: -0.5, z: -0.5}
+      normalA: {x: 0, y: -1, z: 0}
+      normalB: {x: 0, y: -1, z: 0}
+      normalC: {x: 0, y: -1, z: 0}
+    - posA: {x: -0.5, y: -0.5, z: 0.5}
+      posB: {x: -0.5, y: 0.5, z: 0.5}
+      posC: {x: -0.5, y: 0.5, z: -0.5}
+      normalA: {x: -1, y: 0, z: 0}
+      normalB: {x: -1, y: 0, z: 0}
+      normalC: {x: -1, y: 0, z: 0}
+    - posA: {x: -0.5, y: -0.5, z: 0.5}
+      posB: {x: -0.5, y: 0.5, z: -0.5}
+      posC: {x: -0.5, y: -0.5, z: -0.5}
+      normalA: {x: -1, y: 0, z: 0}
+      normalB: {x: -1, y: 0, z: 0}
+      normalC: {x: -1, y: 0, z: 0}
+    - posA: {x: 0.5, y: -0.5, z: -0.5}
+      posB: {x: 0.5, y: 0.5, z: -0.5}
+      posC: {x: 0.5, y: 0.5, z: 0.5}
+      normalA: {x: 1, y: 0, z: 0}
+      normalB: {x: 1, y: 0, z: 0}
+      normalC: {x: 1, y: 0, z: 0}
+    - posA: {x: 0.5, y: -0.5, z: -0.5}
+      posB: {x: 0.5, y: 0.5, z: 0.5}
+      posC: {x: 0.5, y: -0.5, z: 0.5}
+      normalA: {x: 1, y: 0, z: 0}
+      normalB: {x: 1, y: 0, z: 0}
+      normalC: {x: 1, y: 0, z: 0}
+    bounds:
+      m_Center: {x: 0.0024999976, y: -0.0024999976, z: 0.0024999976}
+      m_Extent: {x: 0.5025, y: 0.5025, z: 0.5025}
+    subMeshIndex: 0
 --- !u!1 &1727364898
 GameObject:
   m_ObjectHideFlags: 0
@@ -862,6 +1580,7 @@ GameObject:
   - component: {fileID: 1727364901}
   - component: {fileID: 1727364900}
   - component: {fileID: 1727364899}
+  - component: {fileID: 1727364903}
   m_Layer: 0
   m_Name: Plane
   m_TagString: Untagged
@@ -914,7 +1633,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 769411698}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -959,6 +1678,1277 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1727364903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1727364898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d06b107e1c924df2a65c6d726f481aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materials:
+  - colour: {r: 1, g: 1, b: 1, a: 1}
+    emissionColour: {r: 1, g: 1, b: 1, a: 1}
+    specularColour: {r: 1, g: 1, b: 1, a: 1}
+    emissionStrength: 0
+    smoothness: 0
+    specularProbability: 1
+    flag: 0
+  meshRenderer: {fileID: 1727364900}
+  meshFilter: {fileID: 1727364901}
+  triangleCount: 200
+  materialObjectID: 36288
+  mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+  localChunks:
+  - triangles:
+    - posA: {x: -4.0000005, y: -2.2204459e-17, z: 0.99999994}
+      posB: {x: -5, y: 0, z: 0}
+      posC: {x: -5, y: -2.2204459e-17, z: 0.99999994}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: -4.0000005, y: -2.2204459e-17, z: 0.99999994}
+      posB: {x: -4.0000005, y: 0, z: 0}
+      posC: {x: -5, y: 0, z: 0}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: -3, y: -2.2204459e-17, z: 0.99999994}
+      posB: {x: -4.0000005, y: 0, z: 0}
+      posC: {x: -4.0000005, y: -2.2204459e-17, z: 0.99999994}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: -4.0000005, y: 0, z: 0}
+      posB: {x: -5, y: 2.2204466e-17, z: -1.0000002}
+      posC: {x: -5, y: 0, z: 0}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: -3, y: -2.2204459e-17, z: 0.99999994}
+      posB: {x: -3, y: 0, z: 0}
+      posC: {x: -4.0000005, y: 0, z: 0}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: -1.9999999, y: -2.2204459e-17, z: 0.99999994}
+      posB: {x: -3, y: 0, z: 0}
+      posC: {x: -3, y: -2.2204459e-17, z: 0.99999994}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: -4.0000005, y: 0, z: 0}
+      posB: {x: -4.0000005, y: 2.2204466e-17, z: -1.0000002}
+      posC: {x: -5, y: 2.2204466e-17, z: -1.0000002}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: -3, y: 0, z: 0}
+      posB: {x: -4.0000005, y: 2.2204466e-17, z: -1.0000002}
+      posC: {x: -4.0000005, y: 0, z: 0}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: -1.9999999, y: -2.2204459e-17, z: 0.99999994}
+      posB: {x: -1.9999999, y: 0, z: 0}
+      posC: {x: -3, y: 0, z: 0}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: -1.0000002, y: -2.2204459e-17, z: 0.99999994}
+      posB: {x: -1.9999999, y: 0, z: 0}
+      posC: {x: -1.9999999, y: -2.2204459e-17, z: 0.99999994}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: -3, y: 0, z: 0}
+      posB: {x: -3, y: 2.2204466e-17, z: -1.0000002}
+      posC: {x: -4.0000005, y: 2.2204466e-17, z: -1.0000002}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: -1.9999999, y: 0, z: 0}
+      posB: {x: -3, y: 2.2204466e-17, z: -1.0000002}
+      posC: {x: -3, y: 0, z: 0}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: -1.9999999, y: 0, z: 0}
+      posB: {x: -1.9999999, y: 2.2204466e-17, z: -1.0000002}
+      posC: {x: -3, y: 2.2204466e-17, z: -1.0000002}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: -1.0000002, y: -2.2204459e-17, z: 0.99999994}
+      posB: {x: -1.0000002, y: 0, z: 0}
+      posC: {x: -1.9999999, y: 0, z: 0}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: -1.0000002, y: 0, z: 0}
+      posB: {x: -1.9999999, y: 2.2204466e-17, z: -1.0000002}
+      posC: {x: -1.9999999, y: 0, z: 0}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 0, y: -2.2204459e-17, z: 0.99999994}
+      posB: {x: -1.0000002, y: 0, z: 0}
+      posC: {x: -1.0000002, y: -2.2204459e-17, z: 0.99999994}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: -1.0000002, y: 0, z: 0}
+      posB: {x: -1.0000002, y: 2.2204466e-17, z: -1.0000002}
+      posC: {x: -1.9999999, y: 2.2204466e-17, z: -1.0000002}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 0, y: 0, z: 0}
+      posB: {x: -1.0000002, y: 2.2204466e-17, z: -1.0000002}
+      posC: {x: -1.0000002, y: 0, z: 0}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 0, y: -2.2204459e-17, z: 0.99999994}
+      posB: {x: 0, y: 0, z: 0}
+      posC: {x: -1.0000002, y: 0, z: 0}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 0, y: 0, z: 0}
+      posB: {x: 0, y: 2.2204466e-17, z: -1.0000002}
+      posC: {x: -1.0000002, y: 2.2204466e-17, z: -1.0000002}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 0.99999994, y: 0, z: 0}
+      posB: {x: 0, y: 2.2204466e-17, z: -1.0000002}
+      posC: {x: 0, y: 0, z: 0}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 0.99999994, y: -2.2204459e-17, z: 0.99999994}
+      posB: {x: 0.99999994, y: 0, z: 0}
+      posC: {x: 0, y: 0, z: 0}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 0.99999994, y: -2.2204459e-17, z: 0.99999994}
+      posB: {x: 0, y: 0, z: 0}
+      posC: {x: 0, y: -2.2204459e-17, z: 0.99999994}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    bounds:
+      m_Center: {x: -2, y: -0.0025, z: -2}
+      m_Extent: {x: 3, y: 0.0025, z: 3}
+    subMeshIndex: 0
+  - triangles:
+    - posA: {x: -4.0000005, y: -1.110223e-16, z: 5}
+      posB: {x: -5, y: -8.881784e-17, z: 4}
+      posC: {x: -5, y: -1.110223e-16, z: 5}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: -4.0000005, y: -1.110223e-16, z: 5}
+      posB: {x: -4.0000005, y: -8.881784e-17, z: 4}
+      posC: {x: -5, y: -8.881784e-17, z: 4}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: -3, y: -1.110223e-16, z: 5}
+      posB: {x: -4.0000005, y: -8.881784e-17, z: 4}
+      posC: {x: -4.0000005, y: -1.110223e-16, z: 5}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: -4.0000005, y: -8.881784e-17, z: 4}
+      posB: {x: -5, y: -6.6613384e-17, z: 3}
+      posC: {x: -5, y: -8.881784e-17, z: 4}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: -3, y: -1.110223e-16, z: 5}
+      posB: {x: -3, y: -8.881784e-17, z: 4}
+      posC: {x: -4.0000005, y: -8.881784e-17, z: 4}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: -1.9999999, y: -1.110223e-16, z: 5}
+      posB: {x: -3, y: -8.881784e-17, z: 4}
+      posC: {x: -3, y: -1.110223e-16, z: 5}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: -4.0000005, y: -8.881784e-17, z: 4}
+      posB: {x: -4.0000005, y: -6.6613384e-17, z: 3}
+      posC: {x: -5, y: -6.6613384e-17, z: 3}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: -3, y: -8.881784e-17, z: 4}
+      posB: {x: -4.0000005, y: -6.6613384e-17, z: 3}
+      posC: {x: -4.0000005, y: -8.881784e-17, z: 4}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: -4.0000005, y: -6.6613384e-17, z: 3}
+      posB: {x: -5, y: -4.4408918e-17, z: 1.9999999}
+      posC: {x: -5, y: -6.6613384e-17, z: 3}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: -1.9999999, y: -1.110223e-16, z: 5}
+      posB: {x: -1.9999999, y: -8.881784e-17, z: 4}
+      posC: {x: -3, y: -8.881784e-17, z: 4}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: -1.0000002, y: -1.110223e-16, z: 5}
+      posB: {x: -1.9999999, y: -8.881784e-17, z: 4}
+      posC: {x: -1.9999999, y: -1.110223e-16, z: 5}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: -3, y: -8.881784e-17, z: 4}
+      posB: {x: -3, y: -6.6613384e-17, z: 3}
+      posC: {x: -4.0000005, y: -6.6613384e-17, z: 3}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: -1.9999999, y: -8.881784e-17, z: 4}
+      posB: {x: -3, y: -6.6613384e-17, z: 3}
+      posC: {x: -3, y: -8.881784e-17, z: 4}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: -4.0000005, y: -6.6613384e-17, z: 3}
+      posB: {x: -4.0000005, y: -4.4408918e-17, z: 1.9999999}
+      posC: {x: -5, y: -4.4408918e-17, z: 1.9999999}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: -3, y: -6.6613384e-17, z: 3}
+      posB: {x: -4.0000005, y: -4.4408918e-17, z: 1.9999999}
+      posC: {x: -4.0000005, y: -6.6613384e-17, z: 3}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: -4.0000005, y: -4.4408918e-17, z: 1.9999999}
+      posB: {x: -5, y: -2.2204459e-17, z: 0.99999994}
+      posC: {x: -5, y: -4.4408918e-17, z: 1.9999999}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: -1.0000002, y: -1.110223e-16, z: 5}
+      posB: {x: -1.0000002, y: -8.881784e-17, z: 4}
+      posC: {x: -1.9999999, y: -8.881784e-17, z: 4}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 0, y: -1.110223e-16, z: 5}
+      posB: {x: -1.0000002, y: -8.881784e-17, z: 4}
+      posC: {x: -1.0000002, y: -1.110223e-16, z: 5}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: -1.9999999, y: -8.881784e-17, z: 4}
+      posB: {x: -1.9999999, y: -6.6613384e-17, z: 3}
+      posC: {x: -3, y: -6.6613384e-17, z: 3}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: -1.0000002, y: -8.881784e-17, z: 4}
+      posB: {x: -1.9999999, y: -6.6613384e-17, z: 3}
+      posC: {x: -1.9999999, y: -8.881784e-17, z: 4}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: -3, y: -6.6613384e-17, z: 3}
+      posB: {x: -3, y: -4.4408918e-17, z: 1.9999999}
+      posC: {x: -4.0000005, y: -4.4408918e-17, z: 1.9999999}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: -1.9999999, y: -6.6613384e-17, z: 3}
+      posB: {x: -3, y: -4.4408918e-17, z: 1.9999999}
+      posC: {x: -3, y: -6.6613384e-17, z: 3}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: -4.0000005, y: -4.4408918e-17, z: 1.9999999}
+      posB: {x: -4.0000005, y: -2.2204459e-17, z: 0.99999994}
+      posC: {x: -5, y: -2.2204459e-17, z: 0.99999994}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: -3, y: -4.4408918e-17, z: 1.9999999}
+      posB: {x: -4.0000005, y: -2.2204459e-17, z: 0.99999994}
+      posC: {x: -4.0000005, y: -4.4408918e-17, z: 1.9999999}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 0, y: -1.110223e-16, z: 5}
+      posB: {x: 0, y: -8.881784e-17, z: 4}
+      posC: {x: -1.0000002, y: -8.881784e-17, z: 4}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 0.99999994, y: -1.110223e-16, z: 5}
+      posB: {x: 0, y: -8.881784e-17, z: 4}
+      posC: {x: 0, y: -1.110223e-16, z: 5}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: -1.0000002, y: -8.881784e-17, z: 4}
+      posB: {x: -1.0000002, y: -6.6613384e-17, z: 3}
+      posC: {x: -1.9999999, y: -6.6613384e-17, z: 3}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 0, y: -8.881784e-17, z: 4}
+      posB: {x: -1.0000002, y: -6.6613384e-17, z: 3}
+      posC: {x: -1.0000002, y: -8.881784e-17, z: 4}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: -1.9999999, y: -6.6613384e-17, z: 3}
+      posB: {x: -1.9999999, y: -4.4408918e-17, z: 1.9999999}
+      posC: {x: -3, y: -4.4408918e-17, z: 1.9999999}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: -1.0000002, y: -6.6613384e-17, z: 3}
+      posB: {x: -1.9999999, y: -4.4408918e-17, z: 1.9999999}
+      posC: {x: -1.9999999, y: -6.6613384e-17, z: 3}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: -3, y: -4.4408918e-17, z: 1.9999999}
+      posB: {x: -3, y: -2.2204459e-17, z: 0.99999994}
+      posC: {x: -4.0000005, y: -2.2204459e-17, z: 0.99999994}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: -1.9999999, y: -4.4408918e-17, z: 1.9999999}
+      posB: {x: -3, y: -2.2204459e-17, z: 0.99999994}
+      posC: {x: -3, y: -4.4408918e-17, z: 1.9999999}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 0.99999994, y: -1.110223e-16, z: 5}
+      posB: {x: 0.99999994, y: -8.881784e-17, z: 4}
+      posC: {x: 0, y: -8.881784e-17, z: 4}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 0, y: -8.881784e-17, z: 4}
+      posB: {x: 0, y: -6.6613384e-17, z: 3}
+      posC: {x: -1.0000002, y: -6.6613384e-17, z: 3}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 0.99999994, y: -8.881784e-17, z: 4}
+      posB: {x: 0, y: -6.6613384e-17, z: 3}
+      posC: {x: 0, y: -8.881784e-17, z: 4}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: -1.0000002, y: -6.6613384e-17, z: 3}
+      posB: {x: -1.0000002, y: -4.4408918e-17, z: 1.9999999}
+      posC: {x: -1.9999999, y: -4.4408918e-17, z: 1.9999999}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 0, y: -6.6613384e-17, z: 3}
+      posB: {x: -1.0000002, y: -4.4408918e-17, z: 1.9999999}
+      posC: {x: -1.0000002, y: -6.6613384e-17, z: 3}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: -1.9999999, y: -4.4408918e-17, z: 1.9999999}
+      posB: {x: -1.9999999, y: -2.2204459e-17, z: 0.99999994}
+      posC: {x: -3, y: -2.2204459e-17, z: 0.99999994}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: -1.0000002, y: -4.4408918e-17, z: 1.9999999}
+      posB: {x: -1.9999999, y: -2.2204459e-17, z: 0.99999994}
+      posC: {x: -1.9999999, y: -4.4408918e-17, z: 1.9999999}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 0.99999994, y: -8.881784e-17, z: 4}
+      posB: {x: 0.99999994, y: -6.6613384e-17, z: 3}
+      posC: {x: 0, y: -6.6613384e-17, z: 3}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 0, y: -6.6613384e-17, z: 3}
+      posB: {x: 0, y: -4.4408918e-17, z: 1.9999999}
+      posC: {x: -1.0000002, y: -4.4408918e-17, z: 1.9999999}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 0.99999994, y: -6.6613384e-17, z: 3}
+      posB: {x: 0, y: -4.4408918e-17, z: 1.9999999}
+      posC: {x: 0, y: -6.6613384e-17, z: 3}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: -1.0000002, y: -4.4408918e-17, z: 1.9999999}
+      posB: {x: -1.0000002, y: -2.2204459e-17, z: 0.99999994}
+      posC: {x: -1.9999999, y: -2.2204459e-17, z: 0.99999994}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 0, y: -4.4408918e-17, z: 1.9999999}
+      posB: {x: -1.0000002, y: -2.2204459e-17, z: 0.99999994}
+      posC: {x: -1.0000002, y: -4.4408918e-17, z: 1.9999999}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 0, y: -4.4408918e-17, z: 1.9999999}
+      posB: {x: 0, y: -2.2204459e-17, z: 0.99999994}
+      posC: {x: -1.0000002, y: -2.2204459e-17, z: 0.99999994}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 0.99999994, y: -4.4408918e-17, z: 1.9999999}
+      posB: {x: 0.99999994, y: -2.2204459e-17, z: 0.99999994}
+      posC: {x: 0, y: -2.2204459e-17, z: 0.99999994}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 0.99999994, y: -4.4408918e-17, z: 1.9999999}
+      posB: {x: 0, y: -2.2204459e-17, z: 0.99999994}
+      posC: {x: 0, y: -4.4408918e-17, z: 1.9999999}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 0.99999994, y: -6.6613384e-17, z: 3}
+      posB: {x: 0.99999994, y: -4.4408918e-17, z: 1.9999999}
+      posC: {x: 0, y: -4.4408918e-17, z: 1.9999999}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    bounds:
+      m_Center: {x: -2, y: -0.0025, z: 2.5037508}
+      m_Extent: {x: 3, y: 0.0025, z: 2.5012503}
+    subMeshIndex: 0
+  - triangles:
+    - posA: {x: -4.0000005, y: 4.4408918e-17, z: -1.9999999}
+      posB: {x: -5, y: 6.6613384e-17, z: -3}
+      posC: {x: -5, y: 4.4408918e-17, z: -1.9999999}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: -4.0000005, y: 4.4408918e-17, z: -1.9999999}
+      posB: {x: -4.0000005, y: 6.6613384e-17, z: -3}
+      posC: {x: -5, y: 6.6613384e-17, z: -3}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: -4.0000005, y: 6.6613384e-17, z: -3}
+      posB: {x: -5, y: 8.881785e-17, z: -4.0000005}
+      posC: {x: -5, y: 6.6613384e-17, z: -3}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: -3, y: 4.4408918e-17, z: -1.9999999}
+      posB: {x: -4.0000005, y: 6.6613384e-17, z: -3}
+      posC: {x: -4.0000005, y: 4.4408918e-17, z: -1.9999999}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: -4.0000005, y: 6.6613384e-17, z: -3}
+      posB: {x: -4.0000005, y: 8.881785e-17, z: -4.0000005}
+      posC: {x: -5, y: 8.881785e-17, z: -4.0000005}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: -4.0000005, y: 8.881785e-17, z: -4.0000005}
+      posB: {x: -5, y: 1.110223e-16, z: -5}
+      posC: {x: -5, y: 8.881785e-17, z: -4.0000005}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: -4.0000005, y: 8.881785e-17, z: -4.0000005}
+      posB: {x: -4.0000005, y: 1.110223e-16, z: -5}
+      posC: {x: -5, y: 1.110223e-16, z: -5}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: -3, y: 4.4408918e-17, z: -1.9999999}
+      posB: {x: -3, y: 6.6613384e-17, z: -3}
+      posC: {x: -4.0000005, y: 6.6613384e-17, z: -3}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: -3, y: 6.6613384e-17, z: -3}
+      posB: {x: -4.0000005, y: 8.881785e-17, z: -4.0000005}
+      posC: {x: -4.0000005, y: 6.6613384e-17, z: -3}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: -3, y: 8.881785e-17, z: -4.0000005}
+      posB: {x: -4.0000005, y: 1.110223e-16, z: -5}
+      posC: {x: -4.0000005, y: 8.881785e-17, z: -4.0000005}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: -3, y: 6.6613384e-17, z: -3}
+      posB: {x: -3, y: 8.881785e-17, z: -4.0000005}
+      posC: {x: -4.0000005, y: 8.881785e-17, z: -4.0000005}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: -3, y: 8.881785e-17, z: -4.0000005}
+      posB: {x: -3, y: 1.110223e-16, z: -5}
+      posC: {x: -4.0000005, y: 1.110223e-16, z: -5}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: -1.9999999, y: 4.4408918e-17, z: -1.9999999}
+      posB: {x: -3, y: 6.6613384e-17, z: -3}
+      posC: {x: -3, y: 4.4408918e-17, z: -1.9999999}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: -1.9999999, y: 6.6613384e-17, z: -3}
+      posB: {x: -3, y: 8.881785e-17, z: -4.0000005}
+      posC: {x: -3, y: 6.6613384e-17, z: -3}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: -1.9999999, y: 4.4408918e-17, z: -1.9999999}
+      posB: {x: -1.9999999, y: 6.6613384e-17, z: -3}
+      posC: {x: -3, y: 6.6613384e-17, z: -3}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: -1.9999999, y: 8.881785e-17, z: -4.0000005}
+      posB: {x: -3, y: 1.110223e-16, z: -5}
+      posC: {x: -3, y: 8.881785e-17, z: -4.0000005}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: -1.9999999, y: 6.6613384e-17, z: -3}
+      posB: {x: -1.9999999, y: 8.881785e-17, z: -4.0000005}
+      posC: {x: -3, y: 8.881785e-17, z: -4.0000005}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: -1.9999999, y: 8.881785e-17, z: -4.0000005}
+      posB: {x: -1.9999999, y: 1.110223e-16, z: -5}
+      posC: {x: -3, y: 1.110223e-16, z: -5}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    bounds:
+      m_Center: {x: -3.5, y: 0.00125, z: -3.5}
+      m_Extent: {x: 1.5, y: 0.00125, z: 1.5}
+    subMeshIndex: 0
+  - triangles:
+    - posA: {x: -4.0000005, y: 2.2204466e-17, z: -1.0000002}
+      posB: {x: -5, y: 4.4408918e-17, z: -1.9999999}
+      posC: {x: -5, y: 2.2204466e-17, z: -1.0000002}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: -4.0000005, y: 2.2204466e-17, z: -1.0000002}
+      posB: {x: -4.0000005, y: 4.4408918e-17, z: -1.9999999}
+      posC: {x: -5, y: 4.4408918e-17, z: -1.9999999}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: -3, y: 2.2204466e-17, z: -1.0000002}
+      posB: {x: -4.0000005, y: 4.4408918e-17, z: -1.9999999}
+      posC: {x: -4.0000005, y: 2.2204466e-17, z: -1.0000002}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: -3, y: 2.2204466e-17, z: -1.0000002}
+      posB: {x: -3, y: 4.4408918e-17, z: -1.9999999}
+      posC: {x: -4.0000005, y: 4.4408918e-17, z: -1.9999999}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: -1.9999999, y: 2.2204466e-17, z: -1.0000002}
+      posB: {x: -3, y: 4.4408918e-17, z: -1.9999999}
+      posC: {x: -3, y: 2.2204466e-17, z: -1.0000002}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: -1.9999999, y: 2.2204466e-17, z: -1.0000002}
+      posB: {x: -1.9999999, y: 4.4408918e-17, z: -1.9999999}
+      posC: {x: -3, y: 4.4408918e-17, z: -1.9999999}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    bounds:
+      m_Center: {x: -3.5, y: 0.00125, z: -1.2481246}
+      m_Extent: {x: 1.5, y: 0.00125, z: 1.2506251}
+    subMeshIndex: 0
+  - triangles:
+    - posA: {x: -1.0000002, y: 4.4408918e-17, z: -1.9999999}
+      posB: {x: -1.9999999, y: 6.6613384e-17, z: -3}
+      posC: {x: -1.9999999, y: 4.4408918e-17, z: -1.9999999}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: -1.0000002, y: 6.6613384e-17, z: -3}
+      posB: {x: -1.9999999, y: 8.881785e-17, z: -4.0000005}
+      posC: {x: -1.9999999, y: 6.6613384e-17, z: -3}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: -1.0000002, y: 4.4408918e-17, z: -1.9999999}
+      posB: {x: -1.0000002, y: 6.6613384e-17, z: -3}
+      posC: {x: -1.9999999, y: 6.6613384e-17, z: -3}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: -1.0000002, y: 8.881785e-17, z: -4.0000005}
+      posB: {x: -1.9999999, y: 1.110223e-16, z: -5}
+      posC: {x: -1.9999999, y: 8.881785e-17, z: -4.0000005}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: -1.0000002, y: 6.6613384e-17, z: -3}
+      posB: {x: -1.0000002, y: 8.881785e-17, z: -4.0000005}
+      posC: {x: -1.9999999, y: 8.881785e-17, z: -4.0000005}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: -1.0000002, y: 8.881785e-17, z: -4.0000005}
+      posB: {x: -1.0000002, y: 1.110223e-16, z: -5}
+      posC: {x: -1.9999999, y: 1.110223e-16, z: -5}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 0, y: 4.4408918e-17, z: -1.9999999}
+      posB: {x: -1.0000002, y: 6.6613384e-17, z: -3}
+      posC: {x: -1.0000002, y: 4.4408918e-17, z: -1.9999999}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 0, y: 6.6613384e-17, z: -3}
+      posB: {x: -1.0000002, y: 8.881785e-17, z: -4.0000005}
+      posC: {x: -1.0000002, y: 6.6613384e-17, z: -3}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 0, y: 4.4408918e-17, z: -1.9999999}
+      posB: {x: 0, y: 6.6613384e-17, z: -3}
+      posC: {x: -1.0000002, y: 6.6613384e-17, z: -3}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 0, y: 8.881785e-17, z: -4.0000005}
+      posB: {x: -1.0000002, y: 1.110223e-16, z: -5}
+      posC: {x: -1.0000002, y: 8.881785e-17, z: -4.0000005}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 0, y: 6.6613384e-17, z: -3}
+      posB: {x: 0, y: 8.881785e-17, z: -4.0000005}
+      posC: {x: -1.0000002, y: 8.881785e-17, z: -4.0000005}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 0, y: 8.881785e-17, z: -4.0000005}
+      posB: {x: 0, y: 1.110223e-16, z: -5}
+      posC: {x: -1.0000002, y: 1.110223e-16, z: -5}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 0.99999994, y: 8.881785e-17, z: -4.0000005}
+      posB: {x: 0, y: 1.110223e-16, z: -5}
+      posC: {x: 0, y: 8.881785e-17, z: -4.0000005}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 0.99999994, y: 8.881785e-17, z: -4.0000005}
+      posB: {x: 0.99999994, y: 1.110223e-16, z: -5}
+      posC: {x: 0, y: 1.110223e-16, z: -5}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 0.99999994, y: 6.6613384e-17, z: -3}
+      posB: {x: 0, y: 8.881785e-17, z: -4.0000005}
+      posC: {x: 0, y: 6.6613384e-17, z: -3}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 0.99999994, y: 6.6613384e-17, z: -3}
+      posB: {x: 0.99999994, y: 8.881785e-17, z: -4.0000005}
+      posC: {x: 0, y: 8.881785e-17, z: -4.0000005}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 0.99999994, y: 4.4408918e-17, z: -1.9999999}
+      posB: {x: 0, y: 6.6613384e-17, z: -3}
+      posC: {x: 0, y: 4.4408918e-17, z: -1.9999999}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 0.99999994, y: 4.4408918e-17, z: -1.9999999}
+      posB: {x: 0.99999994, y: 6.6613384e-17, z: -3}
+      posC: {x: 0, y: 6.6613384e-17, z: -3}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    bounds:
+      m_Center: {x: -0.5, y: 0.00125, z: -3.5}
+      m_Extent: {x: 1.5, y: 0.00125, z: 1.5}
+    subMeshIndex: 0
+  - triangles:
+    - posA: {x: -1.0000002, y: 2.2204466e-17, z: -1.0000002}
+      posB: {x: -1.9999999, y: 4.4408918e-17, z: -1.9999999}
+      posC: {x: -1.9999999, y: 2.2204466e-17, z: -1.0000002}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: -1.0000002, y: 2.2204466e-17, z: -1.0000002}
+      posB: {x: -1.0000002, y: 4.4408918e-17, z: -1.9999999}
+      posC: {x: -1.9999999, y: 4.4408918e-17, z: -1.9999999}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 0, y: 2.2204466e-17, z: -1.0000002}
+      posB: {x: -1.0000002, y: 4.4408918e-17, z: -1.9999999}
+      posC: {x: -1.0000002, y: 2.2204466e-17, z: -1.0000002}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 0, y: 2.2204466e-17, z: -1.0000002}
+      posB: {x: 0, y: 4.4408918e-17, z: -1.9999999}
+      posC: {x: -1.0000002, y: 4.4408918e-17, z: -1.9999999}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 0.99999994, y: 2.2204466e-17, z: -1.0000002}
+      posB: {x: 0, y: 4.4408918e-17, z: -1.9999999}
+      posC: {x: 0, y: 2.2204466e-17, z: -1.0000002}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 0.99999994, y: 2.2204466e-17, z: -1.0000002}
+      posB: {x: 0.99999994, y: 4.4408918e-17, z: -1.9999999}
+      posC: {x: 0, y: 4.4408918e-17, z: -1.9999999}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 0.99999994, y: 0, z: 0}
+      posB: {x: 0.99999994, y: 2.2204466e-17, z: -1.0000002}
+      posC: {x: 0, y: 2.2204466e-17, z: -1.0000002}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    bounds:
+      m_Center: {x: -0.5, y: 0.00125, z: -1.2481246}
+      m_Extent: {x: 1.5, y: 0.00125, z: 1.2506251}
+    subMeshIndex: 0
+  - triangles:
+    - posA: {x: 5, y: 0, z: 0}
+      posB: {x: 5, y: 2.2204466e-17, z: -1.0000002}
+      posC: {x: 4, y: 2.2204466e-17, z: -1.0000002}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 5, y: 0, z: 0}
+      posB: {x: 4, y: 2.2204466e-17, z: -1.0000002}
+      posC: {x: 4, y: 0, z: 0}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 4, y: 0, z: 0}
+      posB: {x: 4, y: 2.2204466e-17, z: -1.0000002}
+      posC: {x: 3, y: 2.2204466e-17, z: -1.0000002}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 5, y: -2.2204459e-17, z: 0.99999994}
+      posB: {x: 5, y: 0, z: 0}
+      posC: {x: 4, y: 0, z: 0}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 3, y: 0, z: 0}
+      posB: {x: 3, y: 2.2204466e-17, z: -1.0000002}
+      posC: {x: 1.9999999, y: 2.2204466e-17, z: -1.0000002}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 4, y: 0, z: 0}
+      posB: {x: 3, y: 2.2204466e-17, z: -1.0000002}
+      posC: {x: 3, y: 0, z: 0}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 5, y: -2.2204459e-17, z: 0.99999994}
+      posB: {x: 4, y: 0, z: 0}
+      posC: {x: 4, y: -2.2204459e-17, z: 0.99999994}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 4, y: -2.2204459e-17, z: 0.99999994}
+      posB: {x: 4, y: 0, z: 0}
+      posC: {x: 3, y: 0, z: 0}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 3, y: 0, z: 0}
+      posB: {x: 1.9999999, y: 2.2204466e-17, z: -1.0000002}
+      posC: {x: 1.9999999, y: 0, z: 0}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 1.9999999, y: 0, z: 0}
+      posB: {x: 1.9999999, y: 2.2204466e-17, z: -1.0000002}
+      posC: {x: 0.99999994, y: 2.2204466e-17, z: -1.0000002}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 1.9999999, y: 0, z: 0}
+      posB: {x: 0.99999994, y: 2.2204466e-17, z: -1.0000002}
+      posC: {x: 0.99999994, y: 0, z: 0}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 4, y: -2.2204459e-17, z: 0.99999994}
+      posB: {x: 3, y: 0, z: 0}
+      posC: {x: 3, y: -2.2204459e-17, z: 0.99999994}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 3, y: -2.2204459e-17, z: 0.99999994}
+      posB: {x: 3, y: 0, z: 0}
+      posC: {x: 1.9999999, y: 0, z: 0}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 1.9999999, y: -2.2204459e-17, z: 0.99999994}
+      posB: {x: 1.9999999, y: 0, z: 0}
+      posC: {x: 0.99999994, y: 0, z: 0}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 3, y: -2.2204459e-17, z: 0.99999994}
+      posB: {x: 1.9999999, y: 0, z: 0}
+      posC: {x: 1.9999999, y: -2.2204459e-17, z: 0.99999994}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 1.9999999, y: -2.2204459e-17, z: 0.99999994}
+      posB: {x: 0.99999994, y: 0, z: 0}
+      posC: {x: 0.99999994, y: -2.2204459e-17, z: 0.99999994}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    bounds:
+      m_Center: {x: 2.5, y: -0.0025, z: -2}
+      m_Extent: {x: 2.5, y: 0.0025, z: 3}
+    subMeshIndex: 0
+  - triangles:
+    - posA: {x: 1.9999999, y: -1.110223e-16, z: 5}
+      posB: {x: 0.99999994, y: -8.881784e-17, z: 4}
+      posC: {x: 0.99999994, y: -1.110223e-16, z: 5}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 1.9999999, y: -1.110223e-16, z: 5}
+      posB: {x: 1.9999999, y: -8.881784e-17, z: 4}
+      posC: {x: 0.99999994, y: -8.881784e-17, z: 4}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 3, y: -1.110223e-16, z: 5}
+      posB: {x: 1.9999999, y: -8.881784e-17, z: 4}
+      posC: {x: 1.9999999, y: -1.110223e-16, z: 5}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 1.9999999, y: -8.881784e-17, z: 4}
+      posB: {x: 0.99999994, y: -6.6613384e-17, z: 3}
+      posC: {x: 0.99999994, y: -8.881784e-17, z: 4}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 5, y: -4.4408918e-17, z: 1.9999999}
+      posB: {x: 5, y: -2.2204459e-17, z: 0.99999994}
+      posC: {x: 4, y: -2.2204459e-17, z: 0.99999994}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 5, y: -4.4408918e-17, z: 1.9999999}
+      posB: {x: 4, y: -2.2204459e-17, z: 0.99999994}
+      posC: {x: 4, y: -4.4408918e-17, z: 1.9999999}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 5, y: -6.6613384e-17, z: 3}
+      posB: {x: 5, y: -4.4408918e-17, z: 1.9999999}
+      posC: {x: 4, y: -4.4408918e-17, z: 1.9999999}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 4, y: -4.4408918e-17, z: 1.9999999}
+      posB: {x: 4, y: -2.2204459e-17, z: 0.99999994}
+      posC: {x: 3, y: -2.2204459e-17, z: 0.99999994}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 5, y: -6.6613384e-17, z: 3}
+      posB: {x: 4, y: -4.4408918e-17, z: 1.9999999}
+      posC: {x: 4, y: -6.6613384e-17, z: 3}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 5, y: -8.881784e-17, z: 4}
+      posB: {x: 5, y: -6.6613384e-17, z: 3}
+      posC: {x: 4, y: -6.6613384e-17, z: 3}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 4, y: -4.4408918e-17, z: 1.9999999}
+      posB: {x: 3, y: -2.2204459e-17, z: 0.99999994}
+      posC: {x: 3, y: -4.4408918e-17, z: 1.9999999}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 3, y: -4.4408918e-17, z: 1.9999999}
+      posB: {x: 3, y: -2.2204459e-17, z: 0.99999994}
+      posC: {x: 1.9999999, y: -2.2204459e-17, z: 0.99999994}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 4, y: -6.6613384e-17, z: 3}
+      posB: {x: 4, y: -4.4408918e-17, z: 1.9999999}
+      posC: {x: 3, y: -4.4408918e-17, z: 1.9999999}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 5, y: -8.881784e-17, z: 4}
+      posB: {x: 4, y: -6.6613384e-17, z: 3}
+      posC: {x: 4, y: -8.881784e-17, z: 4}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 5, y: -1.110223e-16, z: 5}
+      posB: {x: 5, y: -8.881784e-17, z: 4}
+      posC: {x: 4, y: -8.881784e-17, z: 4}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 5, y: -1.110223e-16, z: 5}
+      posB: {x: 4, y: -8.881784e-17, z: 4}
+      posC: {x: 4, y: -1.110223e-16, z: 5}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 4, y: -6.6613384e-17, z: 3}
+      posB: {x: 3, y: -4.4408918e-17, z: 1.9999999}
+      posC: {x: 3, y: -6.6613384e-17, z: 3}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 4, y: -8.881784e-17, z: 4}
+      posB: {x: 4, y: -6.6613384e-17, z: 3}
+      posC: {x: 3, y: -6.6613384e-17, z: 3}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 3, y: -4.4408918e-17, z: 1.9999999}
+      posB: {x: 1.9999999, y: -2.2204459e-17, z: 0.99999994}
+      posC: {x: 1.9999999, y: -4.4408918e-17, z: 1.9999999}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 1.9999999, y: -4.4408918e-17, z: 1.9999999}
+      posB: {x: 1.9999999, y: -2.2204459e-17, z: 0.99999994}
+      posC: {x: 0.99999994, y: -2.2204459e-17, z: 0.99999994}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 3, y: -6.6613384e-17, z: 3}
+      posB: {x: 3, y: -4.4408918e-17, z: 1.9999999}
+      posC: {x: 1.9999999, y: -4.4408918e-17, z: 1.9999999}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 1.9999999, y: -4.4408918e-17, z: 1.9999999}
+      posB: {x: 0.99999994, y: -2.2204459e-17, z: 0.99999994}
+      posC: {x: 0.99999994, y: -4.4408918e-17, z: 1.9999999}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 4, y: -1.110223e-16, z: 5}
+      posB: {x: 4, y: -8.881784e-17, z: 4}
+      posC: {x: 3, y: -8.881784e-17, z: 4}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 4, y: -8.881784e-17, z: 4}
+      posB: {x: 3, y: -6.6613384e-17, z: 3}
+      posC: {x: 3, y: -8.881784e-17, z: 4}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 4, y: -1.110223e-16, z: 5}
+      posB: {x: 3, y: -8.881784e-17, z: 4}
+      posC: {x: 3, y: -1.110223e-16, z: 5}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 3, y: -1.110223e-16, z: 5}
+      posB: {x: 3, y: -8.881784e-17, z: 4}
+      posC: {x: 1.9999999, y: -8.881784e-17, z: 4}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 3, y: -6.6613384e-17, z: 3}
+      posB: {x: 1.9999999, y: -4.4408918e-17, z: 1.9999999}
+      posC: {x: 1.9999999, y: -6.6613384e-17, z: 3}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 1.9999999, y: -6.6613384e-17, z: 3}
+      posB: {x: 1.9999999, y: -4.4408918e-17, z: 1.9999999}
+      posC: {x: 0.99999994, y: -4.4408918e-17, z: 1.9999999}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 1.9999999, y: -6.6613384e-17, z: 3}
+      posB: {x: 0.99999994, y: -4.4408918e-17, z: 1.9999999}
+      posC: {x: 0.99999994, y: -6.6613384e-17, z: 3}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 3, y: -8.881784e-17, z: 4}
+      posB: {x: 3, y: -6.6613384e-17, z: 3}
+      posC: {x: 1.9999999, y: -6.6613384e-17, z: 3}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 3, y: -8.881784e-17, z: 4}
+      posB: {x: 1.9999999, y: -6.6613384e-17, z: 3}
+      posC: {x: 1.9999999, y: -8.881784e-17, z: 4}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 1.9999999, y: -8.881784e-17, z: 4}
+      posB: {x: 1.9999999, y: -6.6613384e-17, z: 3}
+      posC: {x: 0.99999994, y: -6.6613384e-17, z: 3}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    bounds:
+      m_Center: {x: 2.5, y: -0.0025, z: 2.5037508}
+      m_Extent: {x: 2.5, y: 0.0025, z: 2.5012503}
+    subMeshIndex: 0
+  - triangles:
+    - posA: {x: 1.9999999, y: 8.881785e-17, z: -4.0000005}
+      posB: {x: 0.99999994, y: 1.110223e-16, z: -5}
+      posC: {x: 0.99999994, y: 8.881785e-17, z: -4.0000005}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 1.9999999, y: 8.881785e-17, z: -4.0000005}
+      posB: {x: 1.9999999, y: 1.110223e-16, z: -5}
+      posC: {x: 0.99999994, y: 1.110223e-16, z: -5}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 1.9999999, y: 6.6613384e-17, z: -3}
+      posB: {x: 0.99999994, y: 8.881785e-17, z: -4.0000005}
+      posC: {x: 0.99999994, y: 6.6613384e-17, z: -3}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 1.9999999, y: 6.6613384e-17, z: -3}
+      posB: {x: 1.9999999, y: 8.881785e-17, z: -4.0000005}
+      posC: {x: 0.99999994, y: 8.881785e-17, z: -4.0000005}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 1.9999999, y: 4.4408918e-17, z: -1.9999999}
+      posB: {x: 0.99999994, y: 6.6613384e-17, z: -3}
+      posC: {x: 0.99999994, y: 4.4408918e-17, z: -1.9999999}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 1.9999999, y: 4.4408918e-17, z: -1.9999999}
+      posB: {x: 1.9999999, y: 6.6613384e-17, z: -3}
+      posC: {x: 0.99999994, y: 6.6613384e-17, z: -3}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 1.9999999, y: 2.2204466e-17, z: -1.0000002}
+      posB: {x: 0.99999994, y: 4.4408918e-17, z: -1.9999999}
+      posC: {x: 0.99999994, y: 2.2204466e-17, z: -1.0000002}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 1.9999999, y: 2.2204466e-17, z: -1.0000002}
+      posB: {x: 1.9999999, y: 4.4408918e-17, z: -1.9999999}
+      posC: {x: 0.99999994, y: 4.4408918e-17, z: -1.9999999}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 3, y: 8.881785e-17, z: -4.0000005}
+      posB: {x: 1.9999999, y: 1.110223e-16, z: -5}
+      posC: {x: 1.9999999, y: 8.881785e-17, z: -4.0000005}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 3, y: 8.881785e-17, z: -4.0000005}
+      posB: {x: 3, y: 1.110223e-16, z: -5}
+      posC: {x: 1.9999999, y: 1.110223e-16, z: -5}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 3, y: 6.6613384e-17, z: -3}
+      posB: {x: 1.9999999, y: 8.881785e-17, z: -4.0000005}
+      posC: {x: 1.9999999, y: 6.6613384e-17, z: -3}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 3, y: 6.6613384e-17, z: -3}
+      posB: {x: 3, y: 8.881785e-17, z: -4.0000005}
+      posC: {x: 1.9999999, y: 8.881785e-17, z: -4.0000005}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 3, y: 4.4408918e-17, z: -1.9999999}
+      posB: {x: 1.9999999, y: 6.6613384e-17, z: -3}
+      posC: {x: 1.9999999, y: 4.4408918e-17, z: -1.9999999}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 3, y: 4.4408918e-17, z: -1.9999999}
+      posB: {x: 3, y: 6.6613384e-17, z: -3}
+      posC: {x: 1.9999999, y: 6.6613384e-17, z: -3}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 4, y: 8.881785e-17, z: -4.0000005}
+      posB: {x: 3, y: 1.110223e-16, z: -5}
+      posC: {x: 3, y: 8.881785e-17, z: -4.0000005}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 4, y: 8.881785e-17, z: -4.0000005}
+      posB: {x: 4, y: 1.110223e-16, z: -5}
+      posC: {x: 3, y: 1.110223e-16, z: -5}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 4, y: 6.6613384e-17, z: -3}
+      posB: {x: 3, y: 8.881785e-17, z: -4.0000005}
+      posC: {x: 3, y: 6.6613384e-17, z: -3}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 4, y: 6.6613384e-17, z: -3}
+      posB: {x: 4, y: 8.881785e-17, z: -4.0000005}
+      posC: {x: 3, y: 8.881785e-17, z: -4.0000005}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 5, y: 8.881785e-17, z: -4.0000005}
+      posB: {x: 4, y: 1.110223e-16, z: -5}
+      posC: {x: 4, y: 8.881785e-17, z: -4.0000005}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 5, y: 8.881785e-17, z: -4.0000005}
+      posB: {x: 5, y: 1.110223e-16, z: -5}
+      posC: {x: 4, y: 1.110223e-16, z: -5}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 5, y: 6.6613384e-17, z: -3}
+      posB: {x: 5, y: 8.881785e-17, z: -4.0000005}
+      posC: {x: 4, y: 8.881785e-17, z: -4.0000005}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 5, y: 6.6613384e-17, z: -3}
+      posB: {x: 4, y: 8.881785e-17, z: -4.0000005}
+      posC: {x: 4, y: 6.6613384e-17, z: -3}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 5, y: 4.4408918e-17, z: -1.9999999}
+      posB: {x: 5, y: 6.6613384e-17, z: -3}
+      posC: {x: 4, y: 6.6613384e-17, z: -3}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 4, y: 4.4408918e-17, z: -1.9999999}
+      posB: {x: 4, y: 6.6613384e-17, z: -3}
+      posC: {x: 3, y: 6.6613384e-17, z: -3}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 5, y: 4.4408918e-17, z: -1.9999999}
+      posB: {x: 4, y: 6.6613384e-17, z: -3}
+      posC: {x: 4, y: 4.4408918e-17, z: -1.9999999}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 4, y: 4.4408918e-17, z: -1.9999999}
+      posB: {x: 3, y: 6.6613384e-17, z: -3}
+      posC: {x: 3, y: 4.4408918e-17, z: -1.9999999}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 5, y: 2.2204466e-17, z: -1.0000002}
+      posB: {x: 5, y: 4.4408918e-17, z: -1.9999999}
+      posC: {x: 4, y: 4.4408918e-17, z: -1.9999999}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 5, y: 2.2204466e-17, z: -1.0000002}
+      posB: {x: 4, y: 4.4408918e-17, z: -1.9999999}
+      posC: {x: 4, y: 2.2204466e-17, z: -1.0000002}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 4, y: 2.2204466e-17, z: -1.0000002}
+      posB: {x: 4, y: 4.4408918e-17, z: -1.9999999}
+      posC: {x: 3, y: 4.4408918e-17, z: -1.9999999}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 4, y: 2.2204466e-17, z: -1.0000002}
+      posB: {x: 3, y: 4.4408918e-17, z: -1.9999999}
+      posC: {x: 3, y: 2.2204466e-17, z: -1.0000002}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 3, y: 2.2204466e-17, z: -1.0000002}
+      posB: {x: 3, y: 4.4408918e-17, z: -1.9999999}
+      posC: {x: 1.9999999, y: 4.4408918e-17, z: -1.9999999}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    - posA: {x: 3, y: 2.2204466e-17, z: -1.0000002}
+      posB: {x: 1.9999999, y: 4.4408918e-17, z: -1.9999999}
+      posC: {x: 1.9999999, y: 2.2204466e-17, z: -1.0000002}
+      normalA: {x: 0, y: 1, z: 0}
+      normalB: {x: 0, y: 1, z: 0}
+      normalC: {x: 0, y: 1, z: 0}
+    bounds:
+      m_Center: {x: 2.5, y: 0.0025, z: -2.4987497}
+      m_Extent: {x: 2.5, y: 0.0025, z: 2.5012503}
+    subMeshIndex: 0
 --- !u!1 &1781882459
 GameObject:
   m_ObjectHideFlags: 0
@@ -975,7 +2965,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1781882460
 Transform:
   m_ObjectHideFlags: 0
@@ -1001,8 +2991,8 @@ Light:
   m_Enabled: 1
   serializedVersion: 11
   m_Type: 2
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Intensity: 1.56
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -1072,7 +3062,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1792776985
 Transform:
   m_ObjectHideFlags: 0
@@ -1098,8 +3088,8 @@ Light:
   m_Enabled: 1
   serializedVersion: 11
   m_Type: 2
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
+  m_Color: {r: 0.030048013, g: 1, b: 0, a: 1}
+  m_Intensity: 1.43
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -1153,6 +3143,170 @@ Light:
   m_LightUnit: 1
   m_LuxAtDistance: 1
   m_EnableSpotReflector: 1
+--- !u!21 &1871312707
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Standard
+  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _BumpScale: 1
+    - _Cutoff: 0.5
+    - _DetailNormalMapScale: 1
+    - _DstBlend: 0
+    - _GlossMapScale: 1
+    - _Glossiness: 0.5
+    - _GlossyReflections: 1
+    - _Metallic: 0
+    - _Mode: 0
+    - _OcclusionStrength: 1
+    - _Parallax: 0.02
+    - _SmoothnessTextureChannel: 0
+    - _SpecularHighlights: 1
+    - _SrcBlend: 1
+    - _UVSec: 0
+    - _ZWrite: 1
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1
+--- !u!21 &1935336903
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Standard
+  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _BumpScale: 1
+    - _Cutoff: 0.5
+    - _DetailNormalMapScale: 1
+    - _DstBlend: 0
+    - _GlossMapScale: 1
+    - _Glossiness: 0.5
+    - _GlossyReflections: 1
+    - _Metallic: 0
+    - _Mode: 0
+    - _OcclusionStrength: 1
+    - _Parallax: 0.02
+    - _SmoothnessTextureChannel: 0
+    - _SpecularHighlights: 1
+    - _SrcBlend: 1
+    - _UVSec: 0
+    - _ZWrite: 1
+    m_Colors:
+    - _Color: {r: 0, g: 0.90188676, b: 0.2665579, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -1161,7 +3315,7 @@ SceneRoots:
   - {fileID: 457401410}
   - {fileID: 1727364902}
   - {fileID: 1714126865}
-  - {fileID: 623191203}
-  - {fileID: 413642626}
+  - {fileID: 1405691653}
+  - {fileID: 1113130218}
   - {fileID: 311991699}
   - {fileID: 340420405}
