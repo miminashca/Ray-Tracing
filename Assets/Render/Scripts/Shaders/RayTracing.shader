@@ -354,7 +354,12 @@ Shader "Custom/RayTracing"
 				{
 					Ray ray;
 					ray.origin = _WorldSpaceCameraPos;
+					
+					// focus + focus distance
+					float2 defocusJitter = RandomPointInCircle(rngState) * DefocusStrength / numPixels.x;
+					ray.origin = _WorldSpaceCameraPos + camRight * defocusJitter.x + camUp * defocusJitter.y;
 
+					// anti-aliasing
 					float2 jitter = RandomPointInCircle(rngState) * DivergeStrength / numPixels.x;
 					float3 jitteredViewPoint = viewPoint + camRight * jitter.x + camUp * jitter.y;
 					

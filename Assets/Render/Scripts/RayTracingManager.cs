@@ -98,10 +98,10 @@ public class RayTracingManager : MonoBehaviour
 
     void UpdateCameraParams(Camera cam)
     {
-        float planeHeight = cam.nearClipPlane * Mathf.Tan(cam.fieldOfView * 0.5f * Mathf.Deg2Rad) * 2;
+        float planeHeight = focusDistance * Mathf.Tan(cam.fieldOfView * 0.5f * Mathf.Deg2Rad) * 2;
         float planeWidth = planeHeight * cam.aspect;
         // Send data to shader
-        rayTracingMaterial.SetVector("ViewParams" , new Vector3(planeWidth, planeHeight, cam.nearClipPlane)); 
+        rayTracingMaterial.SetVector("ViewParams" , new Vector3(planeWidth, planeHeight, focusDistance)); 
         rayTracingMaterial.SetMatrix("CamLocalToWorldMatrix", cam.transform.localToWorldMatrix);
     }
     
