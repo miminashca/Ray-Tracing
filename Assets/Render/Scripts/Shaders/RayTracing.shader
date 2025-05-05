@@ -39,7 +39,9 @@ Shader "Custom/RayTracing"
 			int NumRaysPerPixel;
 			int Frame;
 
-			// --- Camera Parameters ---
+			// Camera Parameters
+			float DefocusStrength;
+			float DivergeStrength;
 			float3 ViewParams;
 			float4x4 CamLocalToWorldMatrix;
 
@@ -266,6 +268,14 @@ Shader "Custom/RayTracing"
 				return dir * sign(dot(normal, dir));
 			}
 
+			float2 RandomPointInCircle(inout uint rngState)
+			{
+				float angle = RandomValue(rngState) * 2 * PI;
+				float2 pointOnCircle = float2(cos(angle), sin(angle));
+				return pointOnCircle * sqrt(RandomValue(rngState));
+			}
+			
+
 			// --- Enviroment ---
 			float3 GetEnviromentLight(Ray ray)
 			{
@@ -335,15 +345,21 @@ Shader "Custom/RayTracing"
 				// ray
 				float3 viewPointLocal = float3(i.uv - 0.5, 1) * ViewParams;
 				float3 viewPoint = mul(CamLocalToWorldMatrix, float4(viewPointLocal,1));
-
-				Ray ray;
-				ray.origin = _WorldSpaceCameraPos;
-				ray.dir = normalize(viewPoint - ray.origin);
+				float3 camRight = CamLocalToWorldMatrix._m00_m10_m20;
+				float3 camUp = CamLocalToWorldMatrix._m01_m11_m21;
 
 				//color per pixel
 				float3 totalIncomingLight = 0;
 				for (int rayIndex = 0; rayIndex < NumRaysPerPixel; rayIndex ++)
 				{
+					Ray ray;
+					ray.origin = _WorldSpaceCameraPos;
+
+					float2 jitter = RandomPointInCircle(rngState) * DivergeStrength / numPixels.x;
+					float3 jitteredViewPoint = viewPoint + camRight * jitter.x + camUp * jitter.y;
+					
+					ray.dir = normalize(jitteredViewPoint - ray.origin);
+					
 					totalIncomingLight += Trace(ray, rngState);
 				}
 				

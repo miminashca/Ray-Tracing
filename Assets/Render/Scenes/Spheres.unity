@@ -1335,7 +1335,7 @@ MonoBehaviour:
     sunLight: {fileID: 705507994}
     sunFocus: 789.8
     sunIntensity: 63.6
-  useShader: 1
+  useShader: 0
   rayTracingShader: {fileID: 4800000, guid: 5f6c4a7dd931245cdb0c846ab7072113, type: 3}
   accumulateShader: {fileID: 4800000, guid: 1462e7e171ddb46b49a2a3b6367216d6, type: 3}
   numRenderedFrames: 0

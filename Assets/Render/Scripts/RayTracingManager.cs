@@ -12,6 +12,9 @@ public class RayTracingManager : MonoBehaviour
     [Header("Ray Tracing Settings")]
     [SerializeField, Range(0, 32)] int maxBounceCount = 4;
     [SerializeField, Range(0, 64)] int numRaysPerPixel = 2;
+    [SerializeField, Min(0)] float defocusStrength = 0;
+    [SerializeField, Min(0)] float divergeStrength = 0.3f;
+    [SerializeField, Min(0)] float focusDistance = 1;
     [SerializeField] EnvironmentSettings environmentSettings;
     
     [Header("View Settings")]
@@ -121,8 +124,8 @@ public class RayTracingManager : MonoBehaviour
     {
         rayTracingMaterial.SetInt("MaxBounceCount", maxBounceCount);
         rayTracingMaterial.SetInt("NumRaysPerPixel", numRaysPerPixel);
-        // rayTracingMaterial.SetFloat("DefocusStrength", defocusStrength);
-        // rayTracingMaterial.SetFloat("DivergeStrength", divergeStrength);
+        rayTracingMaterial.SetFloat("DefocusStrength", defocusStrength);
+        rayTracingMaterial.SetFloat("DivergeStrength", divergeStrength);
 
         rayTracingMaterial.SetInteger("EnvironmentEnabled", environmentSettings.enabled ? 1 : 0);
         rayTracingMaterial.SetColor("GroundColour", environmentSettings.groundColour);
